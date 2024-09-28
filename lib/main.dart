@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
 
+//Hi mwonu
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -79,7 +79,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: _screens[_selectedIndex],
       floatingActionButton: SizedBox(
         height: 90, // Set the desired height
@@ -89,8 +88,9 @@ class _MyHomePageState extends State<MyHomePage> {
           shape: const CircleBorder(),
           onPressed: _showAlertDialog, // Update to use the new function
           child: Center(
-            child: Image.asset('assets/logo.png',)
-          ),
+              child: Image.asset(
+            'assets/logo.png',
+          )),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -150,15 +150,15 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-
-
 // Dummy Screens
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Home'),);
+    return const Center(
+      child: Text('Home'),
+    );
   }
 }
 
@@ -167,7 +167,9 @@ class MenuScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('Menu Screen'),);
+    return const Center(
+      child: Text('Menu Screen'),
+    );
   }
 }
 
